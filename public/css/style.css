@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #d1dfeb;
+    color: #3e3e3e;
+    text-align: center;
+}
+
+/* COVER */
+.cover {
+    position: fixed;   /* penting */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                      url('/image/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 9999; /* biar di atas semua */
+}
+.cover h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: gold;
+}
+
+.cover button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: gold;
+    color: black;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+/* CONTENT */
+.section {
+    padding: 80px 20px;
+}
+
+.nama {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+}
+
+.card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .cover {
+        background-position: center;
+    }
+}
+
+.swiper {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    background: #d1dfeb;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* BOX UCAPAN (SCROLL) */
+.ucapan-box {
+    max-height: 300px;
+    overflow-y: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* ITEM UCAPAN */
+.ucapan-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+/* HEADER (NAMA + STATUS) */
+.ucapan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NAMA */
+.nama {
+    font-weight: bold;
+}
+
+/* STATUS (KECIL & ELEGAN) */
+.status {
+    font-size: 12px;
+    color: gray;
+    font-style: italic;
+}
+
+/* TEKS UCAPAN */
+.ucapan-text {
+    margin-top: 5px;
+}
+
+.ucapan-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ucapan-box::-webkit-scrollbar-thumb {
+    background: rgb(253, 246, 204);
+    border-radius: 10px;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
