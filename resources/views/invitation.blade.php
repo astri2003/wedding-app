@@ -14,6 +14,9 @@
 
 <!-- COVER -->
 <div class="cover" id="cover">
+    <div class="cover-bg"></div>
+    <div class="curtain-left"></div>
+    <div class="curtain-right"></div>
     <div class="overlay"></div>
 
     <div class="cover-content">
