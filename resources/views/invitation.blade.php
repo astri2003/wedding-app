@@ -130,7 +130,7 @@
     </div>
 
     <!-- GALLERY -->
-    <div class="section" data-aos="fade-up">
+    <div class="section fade" data-aos="fade-up">
         <h2>Gallery</h2>
 
         <div class="swiper mySwiper">
@@ -781,13 +781,24 @@ function copyGift(id, btn) {
 <script>
 const faders = document.querySelectorAll('.fade');
 
-window.addEventListener('scroll', () => {
-    faders.forEach(el => {
-        let top = el.getBoundingClientRect().top;
-        if(top < window.innerHeight - 50){
-            el.classList.add('show');
+const appearOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('show');
+            appearOnScroll.unobserve(entry.target);
         }
     });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
 });
 </script>
 
