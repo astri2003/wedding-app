@@ -18,7 +18,7 @@ Route::get('/key', function () {
     Artisan::call('key:generate');
     return 'key generated';
 });
-Route::get('/migrate', function () {
-    Artisan::call('migrate');
-    return 'migration done';
+Route::get('/setup', function () {
+    Artisan::call('migrate:fresh', ['--force' => true, '--seed' => true]);
+    return 'Database setup (migrate & seed) berhasil!';
 });
